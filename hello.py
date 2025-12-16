@@ -55,9 +55,22 @@
 # else:
 #     print("odd number")
 
-name = input("enter your name: ")
+# name = input("enter your name: ")
 
-updated = name.upper()
-updated2 = name.lower()
-print(f"{updated}, \n{updated2}")
-print(name.replace("a", "@"))
+# updated = name.upper()
+# updated2 = name.lower()
+# print(f"{updated}, \n{updated2}")
+# print(name.replace("a", "@"))
+
+# sentence = "Hey how are you doing?"
+
+# first_five = sentence[0:5]
+# print(first_five)
+# last_five = sentence[-5:]
+# print(last_five)
+
+name = "Hemanth"
+reversed_name = name[::-1]
+print(reversed_name)
+replaced = name.replace("a", "@")
+print(replaced)
