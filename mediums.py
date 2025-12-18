@@ -87,28 +87,28 @@
 # except ValueError:
 #     print("Input should only be numbers")
 
-try:
-    price = float(input("enter the price for the product: "))
-    age = int(input("enter your age: "))
+# try:
+#     price = float(input("enter the price for the product: "))
+#     age = int(input("enter your age: "))
 
-    if price <= 0 and age <= 0:
-        print("price and age values should be greater than 0")
+#     if price <= 0 and age <= 0:
+#         print("price and age values should be greater than 0")
 
-    else: 
-        if age < 18:
-            discount = 0.10
-        elif age <= 60:
-            discount = 0.05
-        else:
-            discount = 0.20
+#     else: 
+#         if age < 18:
+#             discount = 0.10
+#         elif age <= 60:
+#             discount = 0.05
+#         else:
+#             discount = 0.20
 
-        discount_amount = price * discount
-        final_price = price - discount_amount
-        print(f"Discount amount: {discount_amount}")
-        print(f"discount applied {discount*100:.0f}%")
-        print(f"final price is {final_price}")
+#         discount_amount = price * discount
+#         final_price = price - discount_amount
+#         print(f"Discount amount: {discount_amount}")
+#         print(f"discount applied {discount*100:.0f}%")
+#         print(f"final price is {final_price}")
 
-except ValueError:
-    print("input should only be numbers")
+# except ValueError:
+#     print("input should only be numbers")
 
 

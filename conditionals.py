@@ -31,16 +31,17 @@
 # else:
 #     print(f"{second_num} is the greatest!")
 
-temp = input("enter the current temperature: ")
+# temp = input("enter the current temperature: ")
 
-if not temp.isdigit():
-    print("input should be only numbers")
+# if not temp.isdigit():
+#     print("input should be only numbers")
 
-else:
-    temp_i = int(temp)
-    if temp_i < 10:
-        print("the weather is too cold!")
-    if 10 <= temp_i <=30:
-        print("perfect weather!")
-    else:
-        print("too hot")
+# else:
+#     temp_i = int(temp)
+#     if temp_i < 10:
+#         print("the weather is too cold!")
+#     if 10 <= temp_i <=30:
+#         print("perfect weather!")
+#     else:
+#         print("too hot")
+

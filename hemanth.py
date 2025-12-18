@@ -17,4 +17,3 @@ with open("hemanth.txt", "r") as f:
 
 
 
-
