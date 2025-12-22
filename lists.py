@@ -10,16 +10,26 @@
 
 # movies()
 
-def is_palindrome():
-    nums = [1, 2, 3, 2, 1]
-    
-    copy_nums = nums.copy()
-    copy_nums.reverse()
+def is_palindrome(nums):
+    n = len(nums)-1
 
-    if copy_nums == nums:
-        print("palindrome")
-    else:
-        print("not palindrome")
+    for i in range(len(nums)):
+        if nums[i] != nums[n-i]:
+            print("not palindrome")
+            return
+    print("palindrome")        
+  
     
+is_palindrome([])
 
-is_palindrome() 
+
+# def palindrome(n):
+#     l = len(n)-1
+#     for i in range(len(n)):
+#         if n[i] != n[l-i]:
+#            print("not palindrome")
+#            return
+    
+#     print("palindrome")
+
+# palindrome([1,2,3,2,1])
