@@ -1,4 +1,4 @@
-num = int(input("enter any num: "))
+# num = int(input("enter any num: "))
 
 # for i in range(1, num+1):
 #     for j in range(num+1):
@@ -36,8 +36,21 @@ num = int(input("enter any num: "))
 #     print()
 
 
+# for i in range(num):
+#     for j in range((num - i)):
+#         print("*", end = " ")
+#     print()
+
+num = int(input("enter any number: "))
+
 for i in range(num):
-    for j in range((num - i)):
-        print("*", end = " ")
+    print(" " * (num - i) + "*" * (2 * i + 1), end = " ")
+
     print()
-    
+
+for j in range(num):
+    print(" " * (i + 1) + "*" * (num - i - 1), end = " ")
+
+
+
+    print()

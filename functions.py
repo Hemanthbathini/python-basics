@@ -180,3 +180,197 @@
 #     print(f"fact of {n} is {fact}")
 
 # fact_n()
+
+
+
+
+# def run_num_analyzer():
+
+#     count = 0
+#     total = 0
+
+#     while True:
+
+#         user_input = input("Enter any num(q to quit): ")
+
+#         if user_input.lower() == "q":
+#             print("Thanks for playing with us, see you next time!")
+#             break
+
+#         try:
+#             num = int(user_input)
+#             result = num_analyzer(num)
+
+#             if result is not None:
+#                 count += 1
+#                 total += num
+
+#         except ValueError:
+#             print("Please enter a valid number")
+    
+#     print("The final Summary")
+#     print(f"Total numbers you entered: {count} ")
+#     print(f"Total sum of all numbers: {total}")
+
+
+
+# def num_analyzer(num):
+
+#     if num < 0:
+#         print("skipping negative numbers")
+#         return None
+
+#     if num == 0:
+#         print("0 is nuetral")
+#         return None
+
+#     if num%2 == 0:
+#         print(f"{num} is an even number")
+#     else:
+#         print(f"{num} is an odd number")
+
+#     return num
+
+
+
+# run_num_analyzer()
+
+
+# def run_bmi_calculator():
+#     while True:
+
+#         height = input("enter your height in meters(q to done ): ")
+#         if height == "q":
+#             print("Thanks for using our bmi calculator!")
+#             break
+#         weight = input("enter your weight in kg: ")
+
+#         try: 
+#             h = float(height)
+#             w = float(weight)
+
+#             if h == 0 or w == 0:
+#                 print("height and weight should be more than 0")
+#                 continue
+            
+#             bmi = bmi_calculate(h,w)
+#             category = category_bmi(bmi)
+#             print(f"Your BMI is {bmi} ----> {category}")
+
+#         except ValueError:
+#             print("Please enter valid height and weight")
+
+
+# def bmi_calculate(h, w):
+#     return round(w/h**2, 2)
+
+# def category_bmi(bmi):
+#     if bmi < 18.5:
+#         return "underweight"
+    
+#     if bmi < 25:
+#         return "Normal weight"
+    
+#     if bmi < 30:
+#         return "Overweight"
+    
+#     else:
+#         return "Obese"
+    
+
+# run_bmi_calculator()
+
+
+# def calc_sum(nums):
+#     total = 0
+#     for i in range(len(nums)):
+#         total += nums[i]
+#     return total
+
+
+# def cal_average(nums):
+#     average = calc_sum(nums)/len(nums)
+#     return average
+
+# nums = []
+# def run_sum_average(nums):
+
+#     count = 0
+
+#     print("Welcome to Sum and Average calulator!")
+
+#     while True:
+#         user_input = input("Enter a number(q to stop): ").strip()
+#         if user_input == "":
+#             print("Input cannot be empty")
+#             continue
+#         if user_input.lower() == "q":
+#              break
+            
+#         try:
+#             num = int(user_input)
+
+#             if num <= 0:
+#                 print("Numbers should be greater than 0")
+#                 continue
+
+#             nums.append(num)  
+#             count += 1
+
+#         except ValueError:
+#             print("Enter a valid number")
+#     if count > 0:
+#         total = calc_sum(nums)
+#         average = cal_average(nums)
+#         print(f"Summary")
+#         print(f"the total sum of all nums is {total}")
+#         print(f"The average of all numbers is {average}")
+#         print(f"Total numbers you entered: {count}")
+#         print("The numbers you entered: ")
+#         print(','.join(map(str,nums)))
+#     else: 
+#         print("Thank you for using our website, hope we see you again!")
+
+
+# run_sum_average(nums)
+
+
+
+def find_max_min():
+    nums = []
+    while True:
+
+        user_input = input("Enter any number(q to quit): ").strip().lower()
+        if user_input == "q":
+            break
+
+        try:
+            num = int(user_input)
+            nums.append(num)
+        except ValueError:
+            print("Please enter a valid number")
+    if len(nums) > 0:
+        max_number = find_max(nums)
+        min_number = find_min(nums)
+        print(f"Maximum number is {max_number}")
+        print(f"Minimum number is {min_number}")
+
+def find_max(nums):
+    max_number = nums[0]
+    for num in nums:
+        if num > max_number:
+            max_number = num
+
+    return max_number
+
+def find_min(nums):
+    min_number = nums[0]
+    for num in nums:
+        if num < min_number:
+            min_number = num
+
+    return min_number
+
+
+
+find_max_min()
