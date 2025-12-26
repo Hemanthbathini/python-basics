@@ -253,31 +253,226 @@
         
 #Try all subarrays, but only consider ones whose sum is strictly less than 60. Among them, print the length of the longest subarray you found.
 
-nums = [10, 15, 5, 20, 8, 12]
+# nums = [10, 15, 5, 20, 8, 12]
 
-max_length = 0
-best_range = None
+# max_length = 0
+# best_range = None
+
+# n = len(nums)
+
+# for i in range(n):
+    
+#     current_sum = 0
+
+#     for j in range(i, n):
+
+#         current_sum += nums[j]
+
+#         if current_sum >= 60:
+#             break
+
+#         length = j - i + 1
+#         if length > max_length:
+#             max_length = length
+#             best_range = (i, j)
+
+#         print(f"Subarray ({i},{j} sum = {current_sum})")
+
+# print("\nLongest subarray with sum < 60 is:", best_range, "with length:", max_length)
+
+
+
+
+#maximum subarray sum
+
+# nums = [10, 15, 5, 20, 8, 12]
+# n = len(nums)
+# max_subarray = float('-inf')
+# for i in range(n):
+#     current_sum = 0
+
+#     for j in range(i, n):
+#         current_sum += nums[j]
+#         if current_sum > max_subarray:
+#             max_subarray = current_sum
+#         print(f"Subarray ({i},{j}) sum = {current_sum}")
+
+# print(max_subarray)
+
+
+#pair sum
+
+# nums = [10, 15, 5, 20, 8, 12]
+
+# target = 20
+# n = len(nums)
+
+# for i in range(n):
+
+#     current_sum = 0
+
+#     for j in range(i, n):
+#         current_sum += nums[j]
+#         if current_sum == target:
+#             print(f"({i},{j}) sum = {current_sum}")
+#         break
+
+
+# nums = [10, 15, 5, 20, 8, 12]
+# total_sum = 0
+
+# for i in range(len(nums)):
+#     total_sum += nums[i]
+
+# if len(nums) == 0:
+#     print("The list is empty!")
+# else:
+#     average_sum = total_sum//len(nums)
+#     print(f"Total sum of the list is {total_sum}")
+#     print(f"The average of all numbers is {average_sum}")
+
+
+
+# nums = [10, 15, 5, 20, 8, 12]
+# highest = float("-inf")
+# miniumum = float("inf")
+
+# for i in range(len(nums)):
+#     if nums[i] > highest:
+#         highest = nums[i]
+#     if nums[i] < miniumum:
+#         miniumum = nums[i]
+# print(highest)
+# print(miniumum)
+
+
+# nums = [10, 15, 5, 20, 8, 12]
+# even_count = 0
+# odd_count = 0
+
+# for i in range(len(nums)):
+#     if nums[i]%2 == 0:
+#         even_count += 1       
+#     else:
+#         odd_count += 1
+
+# print(f"total number of even numbers: {even_count}")
+# print(f"total number of odd numbers: {odd_count}")
+
+# nums = [10, 15, 5, 20, 8, 12]
+
+# reverse_list = []
+
+# for i in range(len(nums)-1, -1, -1):
+#     reverse_list.append(nums[i])
+
+# print(nums)
+# print(reverse_list)
+
+
+# nums = [25, 26, 27]
+# is_sorted = True
+
+# for i in range(1, len(nums)):
+#     if not nums[i] >= nums[i-1]:
+#         is_sorted = False
+#     else:
+#         is_sorted = True
+
+# print(is_sorted)
+
+
+
+# nums = [10, 15, 5, -20, 8, -12]
+
+# positive_nums = []
+
+# for i in range(len(nums)):
+
+#     if nums[i] >= 0:
+#         positive_nums.append(nums[i])
+
+# print(positive_nums)
+
+
+# nums = [10, 15, 5, 20, 20, 20, 8, 12]
+
+# largest = float("-inf")
+# second_largest = float("-inf")
+
+# for i in range(len(nums)):
+
+#     if nums[i] > largest:
+#         second_largest = largest
+#         largest = nums[i]
+#     elif nums[i] < largest and nums[i] > second_largest:
+#         second_largest = nums[i] 
+
+    
+# print(second_largest)
+# print(largest)
+
+
+# nums = [10, 15, 5, 20, 20, 20, 8, 12]
+
+# elements = {}
+# n = len(nums)
+
+# for i in range(n):
+#     if nums[i] in elements:
+#         elements[nums[i]] += 1
+#     else:
+#         elements[nums[i]] = 1
+
+# print(elements)
+
+# max_count = 0 
+# max_element = None
+
+# for key, value in elements.items():
+#     if value > max_count:
+#         max_count = value
+#         max_element = key
+
+# print(max_element)
+# print(max_count)
+
+
+# nums = [10, 15, 5, 20, 20, 20, 8, 12]
+
+# unique_nums = []
+
+# for num in nums:
+#     if not num in unique_nums:
+#         unique_nums.append(num)
+# print(unique_nums)
+
+
+# nums1 = [10, 15, 5, 20, 20, 20, 8, 12]
+# nums2 = [35, 47, 68, 98, 55, 20]
+# nums3 = []
+
+# for i in range(len(nums1)):
+#     if nums1[i] in nums2:
+#         if nums1[i] not in nums3:
+#             nums3.append(nums1[i])
+        
+
+# print(nums3)
+
+
+
+nums = [35, 47, 68, 98, 55, 20]
 
 n = len(nums)
 
+
 for i in range(n):
-    
+
     current_sum = 0
 
-    for j in range(i, n):
+
+    for j in range(n):
 
         current_sum += nums[j]
-
-        if current_sum >= 60:
-            break
-
-        length = j - i + 1
-        if length > max_length:
-            max_length = length
-            best_range = (i, j)
-
-        print(f"Subarray ({i},{j} sum = {current_sum})")
-
-print("\nLongest subarray with sum < 60 is:", best_range, "with length:", max_length)
-
-
+        print(f"({i},{j}) sum = {current_sum}")
