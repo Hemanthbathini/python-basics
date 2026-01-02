@@ -41,16 +41,16 @@
 #         print("*", end = " ")
 #     print()
 
-num = int(input("enter any number: "))
+# num = int(input("enter any number: "))
 
-for i in range(num):
-    print(" " * (num - i) + "*" * (2 * i + 1), end = " ")
+# for i in range(num):
+#     print(" " * (num - i) + "*" * (2 * i + 1), end = " ")
 
-    print()
+#     print()
 
-for j in range(num):
-    print(" " * (i + 1) + "*" * (num - i - 1), end = " ")
+# for j in range(num):
+#     print(" " * (i + 1) + "*" * (num - i - 1), end = " ")
 
 
 
-    print()
+#     print()
